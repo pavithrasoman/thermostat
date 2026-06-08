@@ -1,4 +1,4 @@
-# Thermostat Firmware Project – Phase 1: GPIO Driver
+# Thermostat Firmware Project – Phase 1: GPIO Driver 
 
 ## Overview
 
@@ -6,7 +6,7 @@ This repository contains the ongoing development of a thermostat firmware projec
 
 The project is being developed in multiple stages, starting with custom bare-metal peripheral drivers and progressing toward a complete thermostat application featuring sensors, user input, control logic, and RTOS-based architecture.
 
-This first phase focuses on implementing a custom GPIO driver and establishing a complete embedded development workflow from source code to hardware execution.
+This first phase focuses on implementing a custom driver and establishing a complete embedded development workflow from source code to hardware execution.
 
 ## Current Progress
 
@@ -15,6 +15,13 @@ This first phase focuses on implementing a custom GPIO driver and establishing a
 * Custom GPIO driver developed using bare-metal register programming
 * GPIO initialization and output control
 * Onboard LED (LD2 - PA5) control
+
+### SysTick Driver (System Timebase)
+* Implemented SysTick timer using ARM Cortex-M4 core peripheral
+* Configured 1 ms system tick using core clock (SystemCoreClock)
+* Developed millisecond delay functionality using SysTick counter
+* Provided system timebase for future drivers and application timing control
+* Established foundation for RTOS scheduling and event-driven firmware architecture
 
 ### Development Environment
 
@@ -46,7 +53,7 @@ This first phase focuses on implementing a custom GPIO driver and establishing a
 ### Phase 1 – Bare-Metal Drivers (Current)
 
 * [x] GPIO Driver
-* [ ] SysTick Driver
+* [x] SysTick Driver (NEW)
 * [ ] UART Driver
 * [ ] Timer Driver
 * [ ] ADC Driver
@@ -80,4 +87,4 @@ This first phase focuses on implementing a custom GPIO driver and establishing a
 
 🚧 Ongoing Development
 
-Phase 1 completed: Custom GPIO driver implemented and validated on STM32 Nucleo-F446RE.
+Phase 1 completed: Custom GPIO and sysTick driver implemented and validated on STM32 Nucleo-F446RE.
