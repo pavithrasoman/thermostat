@@ -1,4 +1,4 @@
-# Thermostat Firmware Project – Phase 1: GPIO Driver 
+# Thermostat Firmware Project – Phase 1: Bare-metal Drivers
 
 ## Overview
 
