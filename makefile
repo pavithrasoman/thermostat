@@ -21,7 +21,7 @@ LDFLAGS += -Wl,--gc-sections
 BUILD_DIR = build
 
 # Source files (where .c and .s files are)
-C_SOURCES = Core/Src/system_stm32f4xx.c myDriver/main.c myDriver/gpio.c
+C_SOURCES = Core/Src/system_stm32f4xx.c myDriver/main.c myDriver/gpio.c myDriver/systick.c
 ASM_SOURCES = startup_stm32f446xx.s
 
 # Include directories (where .h files are)
@@ -58,6 +58,7 @@ $(BUILD_DIR)/main.o: myDriver/main.c
 $(BUILD_DIR)/gpio.o: myDriver/gpio.c
 	$(CC) -c $< -o $@ $(CFLAGS)
 
+$(BUILD_DIR)/systick.o: myDriver/systick.c
 $(BUILD_DIR)/system_stm32f4xx.o: Core/Src/system_stm32f4xx.c
 	$(CC) -c $< -o $@ $(CFLAGS)
 
