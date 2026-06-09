@@ -59,6 +59,8 @@ $(BUILD_DIR)/gpio.o: myDriver/gpio.c
 	$(CC) -c $< -o $@ $(CFLAGS)
 
 $(BUILD_DIR)/systick.o: myDriver/systick.c
+	$(CC) -c $< -o $@ $(CFLAGS)
+
 $(BUILD_DIR)/system_stm32f4xx.o: Core/Src/system_stm32f4xx.c
 	$(CC) -c $< -o $@ $(CFLAGS)
 
